@@ -5,13 +5,24 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'HelloWorld',
-  data(){
+  name: "HelloWorld",
+  data() {
     return {
-      msg:'Hello TypeScript',
-    }},
+      msg: "Hello TypeScript" as string | number
+    };
+  },
+  // computed: {
+  //   getLength(): string {
+  //     return this.msg;
+  //   },
+  // },
+  methods:{
+    changeMsg(msg:string | number){
+      return this.msg = msg
+    }
+  }
 });
 </script>
